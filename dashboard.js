@@ -33,7 +33,7 @@ if (currentUser == null) {
   document.getElementById("dash").style.display = "none";
 } else {
   document.getElementById("dash").style.display = "block";
-  document.getElementById("message").style.display = "none";
+  // document.getElementById("message").style.display = "none";
 
   if (currentUser == "user") {
     document.getElementById("subscriptions").style.display = "none";

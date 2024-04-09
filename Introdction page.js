@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(content => {
-            localStorage.setItem("wildlifeintro", JSON.stringify(content));
+            localStorage.setItem("Intro", JSON.stringify(content));
   
-            if (!localStorage.getItem("wildlifeintro")) { localStorage.setItem("wildlifeintro", JSON.stringify(content)); }
+            if (!localStorage.getItem("Intro")) { localStorage.setItem("Intro", JSON.stringify(content)); }
             console.log(content);
+            const data = JSON.parse(localStorage.getItem("Intro"));
             
-            document.getElementById("intro-1-text1").innerHTML =
+            document.getElementById("intro-1-text1").innerHTML =    
             data.sections [0].content.header;
             document.getElementById("text-1").innerHTML =
             data.sections [1].content.text;

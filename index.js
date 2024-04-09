@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!localStorage.getItem("homepage")) { localStorage.setItem("homepage", JSON.stringify(content)); }
   
             const data = JSON.parse(localStorage.getItem("homepage"));
-            console.log(data);  
+            console.log(data);
 
             document.getElementById("content-1").innerHTML =
         data.sections [0].content.heading;

@@ -6,8 +6,8 @@ if (get_data_button) {
 
     if (selectPage == "homepage") {
       textarea.value = localStorage.getItem("homepage");
-    } else if (selectPage == "wildlifeintro") {
-      textarea.value = localStorage.getItem("wildlifeintro");
+    } else if (selectPage == "intro") {
+      textarea.value = localStorage.getItem("intro");
     } else if (selectPage == "DOWC") {
       textarea.value = localStorage.getItem("DOWC");
     } else if (selectPage == "leopard") {
@@ -31,9 +31,9 @@ if (editPageButton) {
     if (selectPage && textareaValue) {
       if (selectPage == "homepage") {
         localStorage.setItem("homepage", textareaValue);
-        console.log("ubygv")
-      } else if (selectPage == "Wildlifeintro") {
-        localStorage.setItem("Wildlifeintro", textareaValue);
+        
+      } else if (selectPage == "intro") {
+        localStorage.setItem("intro", textareaValue);
       } else if (selectPage == "DOWC") {
         localStorage.setItem("DOWC", textareaValue);
       } else if (selectPage == "leopard") {
@@ -45,7 +45,7 @@ if (editPageButton) {
       } else if (selectPage == "yala") {
         localStorage.setItem("yala", textareaValue);
       } else {
-        console.log("hello world");
+       
       }
     }
   });
