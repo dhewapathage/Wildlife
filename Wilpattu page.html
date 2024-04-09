@@ -87,6 +87,21 @@
     </div>
     <script src="wilpattu page.js"></script>
   </section>
+  <footer class="newsletterlk">
+    <p>Subscribe to our newsletter for updates:</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input
+        class="newsletter-input"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email address"
+        required
+      />
+      <button class="newsletter-button" type="submit">Subscribe</button>
+    </form>
+  </footer>
+ </div>
   <section id="footer-section">
     <footer class="footer">
       <div class="row">
@@ -142,6 +157,36 @@
     </section>
   </section>
 </body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const newsletterForm = document.getElementById("newsletterForm");
+
+    newsletterForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      const email = document.getElementById("email").value;
+
+      // Save email to localStorage
+      saveEmailToLocalStorage(email);
+
+      // Clear input field
+      document.getElementById("email").value = "";
+
+      alert("Thank you for subscribing to our newsletter!");
+    });
+    function saveEmailToLocalStorage(email) {
+      let subscriptions =
+        JSON.parse(localStorage.getItem("subscriptions")) || [];
+      subscriptions.push(email);
+      localStorage.setItem(
+        "subscriptions",
+        JSON.stringify(subscriptions)
+      );
+    }
+  });
+</script>
+
 
 
 <!-- Wilpattu Tree House. (n.d.). Wilpattu. [online] Available at: https://wilpattucorridor.lk/about/wilpattu. -->

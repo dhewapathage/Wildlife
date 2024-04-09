@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(content => {
-            if (!localStorage.getItem("DOWC")) { localStorage.setItem("DOWC", JSON.stringify(content)); }
-            const data = JSON.parse(localStorage.getItem("DOWC"));
+            if (!localStorage.getItem("dowc")) { localStorage.setItem("dowc", JSON.stringify(content)); }
+  
+            const data = JSON.parse(localStorage.getItem("dowc"));
             console.log(data);
             
             
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.sections [1].heading;
 
         const dowc_image1 = data.sections[1].protected_areas[0].image;
-            document.getElementById("dowcimg").src = `${dowc_image1}`;
+            document.getElementById("dowcimg").src = `./${dowc_image1}`;
         document.getElementById("box1").innerHTML =
         data.sections [1].protected_areas[0].name;
         const dowc_image2 = data.sections[1].protected_areas[1].image;
